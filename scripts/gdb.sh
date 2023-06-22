@@ -35,7 +35,7 @@
 
 # **************************************************************************
 
-PKG_VERSION=$( [[ `echo $BUILD_VERSION | cut -d. -f1` == 4 || `echo $BUILD_VERSION | cut -d. -f1` == 5 ]] && { echo 7.12; } || { echo 11.2; } )
+PKG_VERSION=$( [[ `echo $BUILD_VERSION | cut -d. -f1` == 4 || `echo $BUILD_VERSION | cut -d. -f1` == 5 ]] && { echo 7.12; } || { echo 10.2; } )
 PKG_NAME=gdb-${PKG_VERSION}
 PKG_DIR_NAME=gdb-${PKG_VERSION}
 PKG_TYPE=.tar.xz
@@ -73,11 +73,10 @@ PKG_CONFIGURE_FLAGS=(
 	--disable-rpath
 	#
 	--with-system-gdbinit=$PREFIX/etc/gdbinit
-	--with-python=$PREFIX/opt/bin/python3.exe
+	--with-python=$PREFIX/opt/bin/python-config-u.sh
 	--with-expat
 	--with-libiconv
 	--with-zlib
-	--enable-tui
 	--disable-gdbtk
 	#
 	# the _WIN32_WINNT hack here because of: https://sourceware.org/pipermail/gdb/2022-November/050432.html

@@ -94,7 +94,7 @@ LINK_TYPE_GCC_STATIC="--disable-host-shared"
 LINK_TYPE_GCC=$LINK_TYPE_GCC_SHARED
 GCC_DEPS_LINK_TYPE=$LINK_TYPE_STATIC
 
-ENABLE_LANGUAGES='c,c++,fortran'
+ENABLE_LANGUAGES='c,c++'
 
 SHOW_LOG_ON_ERROR=yes
 
@@ -137,7 +137,7 @@ SHORT_OUTPUT=no
 DISABLE_GCC_LTO=no
 PROVIDED_TOOLCHAIN=
 
-DEFAULT_PYTHON_VERSION=3
+DEFAULT_PYTHON_VERSION=2
 
 # **************************************************************************
 
